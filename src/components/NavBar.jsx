@@ -11,11 +11,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full bg-gradient-to-r from-pink-50 via-pink-100 to-pink-50 shadow-md fixed top-0 left-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center space-x-6">
-        {/* Logo only for now*/}
-        {/* <img src="/logo.png" alt="Logo" className="h-12" /> */}
-        <h1 className="text-2xl font-bold text-pink-700">Logo</h1>
+    <nav className="w-full bg-gradient-to-r from-yellow-100 via-white to-blue-100 shadow-md fixed top-0 left-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center space-x-8">
+        {/* Logo */}
+        <div>
+          <img src="/speakuplogo.png" alt="Logo" className="h-20" />
+        </div>
 
         {/* Desktop View */}
         <div className="hidden md:flex space-x-4">
@@ -23,7 +24,7 @@ export default function Navbar() {
             <Link
               key={page.name}
               to={page.path}
-              className="text-pink-600 hover:text-pink-800 font-medium transition"
+              className="text-blue-400 hover:text-blue-600 font-medium transition"
             >
               {page.name}
             </Link>
@@ -45,7 +46,7 @@ export default function Navbar() {
 
       {/* Mobile View */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-pink-50 px-6 py-4 flex flex-col space-y-4 shadow-md">
+        <div className="md:hidden w-full bg-gradient-to-r from-yellow-100 via-white to-blue-100 shadow-md fixed top-0 left-0 z-50 px-6 py-4 flex flex-col space-y-4 shadow-md">
           {pages.map((page) => (
             <Link
               key={page.name}
