@@ -8,7 +8,7 @@ import Map from "./pages/Map";
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-pink-50">
+      <div className="min-h-screen bg-white">
         <Navbar />
         <main className="pt-24 flex flex-col items-center justify-center">
           <Routes>
