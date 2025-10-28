@@ -4,13 +4,13 @@ export default function Home() {
   return (
     <div className="flex flex-col md:flex-row h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50">
 
-      {/* Speak Up Mission Yur! */}
+      {/* Speak Up Mission */}
       <div className="flex-1 flex flex-col justify-center items-center px-10 py-10">
-        <h2 className="text-5xl font-extrabold text-blue-500 mb-6">
+        <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
           Welcome to Speak Up!
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-lg">
-          Speak Up is a platform dedicated to helping New Yorkers understand policies in their own city. We simplify local government action to facilitate community and civic engagement, allowing everyone’s voice to be heard.
+          Speak Up is a platform dedicated to helping New Yorkers understand local policies. We break down government action so that everyone can engage with their community and have their voices heard. 
         </p>
         <p className="text-gray-600 italic">
           “Speak up, even if your voice shakes.”
