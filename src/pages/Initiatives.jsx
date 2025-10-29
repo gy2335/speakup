@@ -76,15 +76,15 @@ export default function IntiativesMap() {
   );
 
   return (
-    <div className="w-screen" style={{ height: 'calc(100vh - 100px)', paddingTop: '100px' }}>
-      <div className="flex flex-col md:flex-row h-full gap-6 px-6 md:px-12">
+    <div className="w-screen min-h-screen pt-32 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50">
+      <div className="flex flex-col md:flex-row gap-6 h-[calc(100vh-8rem)]">
         {/* Map */}
-        <div className="flex-[2] h-full rounded-lg overflow-hidden shadow-md">
+        <div className="flex-[2] min-h-[400px] md:h-full rounded-lg overflow-hidden shadow-md">
           <MapContainer
             center={[40.7128, -74.006]}
             zoom={11}
             scrollWheelZoom={false}
-            className="h-full w-full"
+            className="w-full h-full"
           >
             <TileLayer
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
@@ -98,25 +98,25 @@ export default function IntiativesMap() {
         </div>
 
         {/* Initiative List */}
-        <div className="flex-[1] h-full p-4 bg-gray-50 rounded-lg shadow-md overflow-y-auto">
+        <div className="flex-[1] h-full overflow-y-auto space-y-4">
           <input
             type="text"
             placeholder="Search initiatives..."
-            className="w-full mb-4 p-2 border rounded"
+            className="w-full mb-4 p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-300"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
 
-          <ul>
+          <ul className="space-y-4">
             {filteredInitiatives.map((init) => (
               <li
                 key={init.name}
-                className="mb-2 p-2 border rounded cursor-pointer hover:bg-gray-200"
+                className="relative rounded-2xl overflow-hidden shadow-lg bg-white p-4"
               >
                 {/* click name/description to fly */}
                 <div onClick={() => setSelectedMarker(init)}>
-                  <strong>{init.name}</strong>
-                  <p className="text-sm">{init.description}</p>
+                  <strong className="text-lg text-blue-500">{init.name}</strong>
+                  <p className="text-sm text-gray-700">{init.description}</p>
                 </div>
 
                 {/* link */}
@@ -125,15 +125,16 @@ export default function IntiativesMap() {
                     href={init.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline mt-1 block"
+                    className="text-yellow-600 underline hover:text-yellow-500 mt-2 block"
                   >
                     Learn More
                   </a>
                 )}
               </li>
             ))}
+
             {filteredInitiatives.length === 0 && (
-              <li className="text-gray-500">No initiatives found.</li>
+              <li className="text-gray-500 text-center">No initiatives found.</li>
             )}
           </ul>
         </div>
