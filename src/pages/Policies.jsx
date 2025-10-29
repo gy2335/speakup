@@ -31,7 +31,7 @@ export default function Policies() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-white via-blue-50 to-yellow-50">
       <div className="pt-36 px-6 md:px-12 max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center text-blue-400">
+        <h2 className="text-4xl md:text-4xl font-extrabold mb-8 text-center text-blue-400">
           New York City Policies
         </h2>
 

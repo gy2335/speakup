@@ -77,6 +77,9 @@ export default function IntiativesMap() {
 
   return (
     <div className="w-screen min-h-screen pt-32 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50">
+      <h2 className="text-4xl md:text-4xl font-extrabold mb-8 text-center text-blue-400">
+        New York City Initiatives
+      </h2>
       <div className="flex flex-col md:flex-row gap-6 h-[calc(100vh-8rem)]">
         {/* Map */}
         <div className="flex-[2] min-h-[400px] md:h-full rounded-lg overflow-hidden shadow-md">
