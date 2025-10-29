@@ -12,7 +12,7 @@ const markerIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-// List of intiatives
+// initiatives
 const initiatives = [
   {
     name: "Sunset Park Cleanup",
@@ -28,7 +28,7 @@ const initiatives = [
   }
 ];
 
-// moves to the marker when touched
+// fly to marker when touched
 function FlyToMarker({ position }) {
   const map = useMap();
   if (position) {
@@ -59,6 +59,16 @@ export default function IntiativesMap() {
           <Popup>
             <strong>{init.name}</strong>
             <p>{init.description}</p>
+            {init.link && (
+              <a
+                href={init.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline"
+              >
+                Learn More
+              </a>
+            )}
           </Popup>
         </Marker>
       )),
@@ -66,10 +76,10 @@ export default function IntiativesMap() {
   );
 
   return (
-    <div className="w-screen h-screen pt-[100px] px-6 md:px-12">
-      <div className="flex flex-col md:flex-row h-full gap-6">
+    <div className="w-screen" style={{ height: 'calc(100vh - 100px)', paddingTop: '100px' }}>
+      <div className="flex flex-col md:flex-row h-full gap-6 px-6 md:px-12">
         {/* Map */}
-        <div className="flex-[2] h-1/2 md:h-full rounded-lg overflow-hidden shadow-md">
+        <div className="flex-[2] h-full rounded-lg overflow-hidden shadow-md">
           <MapContainer
             center={[40.7128, -74.006]}
             zoom={11}
@@ -88,7 +98,7 @@ export default function IntiativesMap() {
         </div>
 
         {/* Initiative List */}
-        <div className="flex-[1] h-1/2 md:h-full p-4 bg-gray-50 rounded-lg shadow-md overflow-y-auto">
+        <div className="flex-[1] h-full p-4 bg-gray-50 rounded-lg shadow-md overflow-y-auto">
           <input
             type="text"
             placeholder="Search initiatives..."
@@ -102,26 +112,29 @@ export default function IntiativesMap() {
               <li
                 key={init.name}
                 className="mb-2 p-2 border rounded cursor-pointer hover:bg-gray-200"
-                onClick={() => setSelectedMarker(init)}
               >
-                {init.link ? (
+                {/* click name/description to fly */}
+                <div onClick={() => setSelectedMarker(init)}>
+                  <strong>{init.name}</strong>
+                  <p className="text-sm">{init.description}</p>
+                </div>
+
+                {/* link */}
+                {init.link && (
                   <a
-                    href={init.link} // adds link too
+                    href={init.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="text-blue-600 underline mt-1 block"
                   >
-                    <strong>{init.name}</strong>
-                    <p className="text-sm">{init.description}</p>
+                    Learn More
                   </a>
-                ) : (
-                  <>
-                    <strong>{init.name}</strong>
-                    <p className="text-sm">{init.description}</p>
-                  </>
                 )}
               </li>
             ))}
+            {filteredInitiatives.length === 0 && (
+              <li className="text-gray-500">No initiatives found.</li>
+            )}
           </ul>
         </div>
       </div>
