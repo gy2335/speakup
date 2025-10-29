@@ -10,7 +10,7 @@ export default function Home() {
           Welcome to Speak Up!
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-lg">
-          Speak Up is a platform dedicated to helping New Yorkers understand local policies. We break down government action so that everyone can engage with their community and have their voices heard. 
+          Speak Up is a platform dedicated to helping New Yorkers understand local policies. We break down government action so that everyone can engage with their community and have their voices heard.
         </p>
         <p className="text-gray-600 italic">
           “Speak up, even if your voice shakes.”
@@ -38,7 +38,7 @@ export default function Home() {
               <h4 className="text-xl font-bold">Mayoral Election</h4>
               <p className="text-sm">
                 Candidates Zohran Mamdami, Andrew Cuomo, and Curtis Sliwa debate
-                housing, climate, and safety. Early voting begins next week!
+                housing, climate, and safety. Early voting has begun!
               </p>
             </div>
           </div>
@@ -62,14 +62,14 @@ export default function Home() {
           {/*3*/}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
             <img
-              src="idk"
+              src="cellphones.avif"
               alt="idk"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-yellow-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">idk</h4>
+              <h4 className="text-xl font-bold">Cell Phone Ban in Schools</h4>
               <p className="text-sm">
-                idk
+                The cell phone ban has occurred for two months since the start of schools across New York City.
               </p>
             </div>
           </div>
