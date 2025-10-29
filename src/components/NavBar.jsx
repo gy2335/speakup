@@ -7,7 +7,7 @@ export default function Navbar() {
   const pages = [
     { name: "Home", path: "/home" },
     { name: "Policies", path: "/policies" },
-    { name: "Map", path: "/map" },
+    { name: "Initiatives", path: "/initiatives" },
   ];
 
   return (

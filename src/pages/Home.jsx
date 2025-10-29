@@ -10,7 +10,7 @@ export default function Home() {
           Welcome to Speak Up!
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-lg">
-          Speak Up is a platform dedicated to helping New Yorkers understand local policies. We break down government action so that everyone can engage with their community and have their voices heard.
+          Speak Up is a platform dedicated to helping New Yorkers understand local policies and initiatives. We break down government action and provide accessible opportunities so that everyone can actively engage with their community and have their voices heard.
         </p>
         <p className="text-gray-600 italic">
           “Speak up, even if your voice shakes.”
@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="space-y-6 text-left">
           {/*1*/}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img
               src="mayoraldebate.png"
               alt="Mayoral Debate"
@@ -37,14 +37,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Mayoral Election</h4>
               <p className="text-sm">
-                Candidates Zohran Mamdami, Andrew Cuomo, and Curtis Sliwa debate
-                housing, climate, and safety. Early voting has begun!
+                Candidates Zohran Mamdami, Andrew Cuomo, and Curtis Sliwa recently debated elites, housing, and safety. Early voting has now begun!
               </p>
             </div>
           </div>
 
           {/*2*/}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img
               src="trains.jpg"
               alt="Train"
@@ -53,14 +52,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-blue-900 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Transit Upgrades</h4>
               <p className="text-sm">
-                The MTA is rolling out accessibility improvements across 12 key
-                subway stations as part of its 2025 modernization plan.
+                The MTA is rolling out accessibility improvements across 12 key subway stations as part of its 2025 modernization plan.
               </p>
             </div>
           </div>
 
           {/*3*/}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img
               src="cellphones.avif"
               alt="idk"
