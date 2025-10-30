@@ -49,7 +49,43 @@ const initiatives = [
     position: [40.83111049249743, -73.89036655761068],
     description: "Help with the reduction of hunger and food insecurity",
     link: "https://nycommonpantry.org/"
-  }
+  },
+  {
+  name: "City Harvest Volunteering",
+  position: [40.733572, -74.002742],
+  description: "Help collect and deliver surplus food to hungry New Yorkers across the city.",
+  link: "https://www.cityharvest.org/volunteer/"
+},
+{
+  name: "Brooklyn Botanic Garden Volunteering",
+  position: [40.6676, -73.9630],
+  description: "Assist with garden maintenance, plant care, and educational programs at the Brooklyn Botanic Garden.",
+  link: "https://www.bbg.org/volunteer"
+},
+{
+  name: "NYC Parks Tree Planting",
+  position: [40.730610, -73.935242],
+  description: "Join NYC Parks in planting and caring for trees to improve urban green spaces.",
+  link: "https://www.nycgovparks.org/volunteer"
+},
+{
+  name: "Food Bank for NYC",
+  position: [40.742054, -73.993098],
+  description: "Support food distribution and meal preparation for vulnerable communities.",
+  link: "https://www.foodbanknyc.org/volunteer/"
+},
+{
+  name: "Housing Works Volunteering",
+  position: [40.725, -73.995],
+  description: "Volunteer at Housing Works thrift shops or help support programs aiding people affected by HIV/AIDS and homelessness.",
+  link: "https://www.housingworks.org/get-involved/volunteer"
+},
+{
+  name: "New York Restoration Project",
+  position: [40.785091, -73.968285],
+  description: "Help restore and maintain parks and community gardens in underserved neighborhoods.",
+  link: "https://www.nyrp.org/volunteer/"
+},
 ];
 
 // fly to marker when touched
