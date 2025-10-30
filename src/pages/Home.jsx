@@ -41,7 +41,7 @@ export default function Home() {
           {/* 2. Transit Upgrades */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="train.jpg" alt="Train" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-blue-900 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Transit Upgrades</h4>
               <p className="text-sm">
                 The MTA is rolling out accessibility improvements across 12 key subway stations as part of its 2025 modernization plan.
@@ -172,7 +172,7 @@ export default function Home() {
               <h4 className="text-xl font-bold">“No Kings” Protest in Downtown Manhattan</h4>
               <p className="text-xs">Aug 12, 2025</p>
               <p className="text-sm mt-1">
-                Hundreds of New Yorkers gathered in Foley Square for the “No Kings” protest, calling attention to concerns about concentrated political power and criticizing the emergence of political “dynasties” in city leadership. 
+                Hundreds of New Yorkers gathered in Foley Square for the “No Kings” protest, calling attention to concerns about concentrated political power and criticizing the emergence of political “dynasties” in city leadership.
               </p>
               <p className="text-xs italic mt-1">
                 Significance: Highlights growing public pushback against political elites and emphasizes a desire for more transparent, community-driven governance in NYC.
