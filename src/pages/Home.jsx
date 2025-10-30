@@ -40,7 +40,7 @@ export default function Home() {
 
           {/* 2. Transit Upgrades */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="trains.jpg" alt="Train" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="train.jpg" alt="Train" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Transit Upgrades</h4>
               <p className="text-sm">
@@ -167,7 +167,7 @@ export default function Home() {
 
           {/* 11. Meet the Candidates Report */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="meetcandidates.webp" alt="Meet the Candidates" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="meethem.webp" alt="Meet the Candidates" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">“Meet the Candidates” Report: 2025 NYC Mayoral Race</h4>
               <p className="text-xs">Oct 28, 2025</p>
