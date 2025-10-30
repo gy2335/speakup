@@ -52,7 +52,7 @@ export default function Home() {
           {/* 3. Cell Phone Ban */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="cellphones.avif" alt="Cell Phone Ban" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-yellow-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Cell Phone Ban in Schools</h4>
               <p className="text-sm">
                 The cell phone ban has occurred for two months since the start of schools across New York City.
@@ -63,7 +63,7 @@ export default function Home() {
           {/* 4. Zohran Mamdani nomination */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="zohran.jpg" alt="Mamdani nomination" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Zohran Mamdani wins Democratic nomination for NYC mayor</h4>
               <p className="text-xs">July 1, 2025</p>
               <p className="text-sm mt-1">
@@ -78,7 +78,7 @@ export default function Home() {
           {/* 5. Hochul endorsement */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="hocul.jpg" alt="Hochul endorsement" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Kathy Hochul endorses Zohran Mamdani</h4>
               <p className="text-xs">Sep 15, 2025</p>
               <p className="text-sm mt-1">
@@ -93,7 +93,7 @@ export default function Home() {
           {/* 6. NYC Is Not for Sale Rally */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="nycnotforsale.jpg" alt="NYC Is Not for Sale Rally" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">“NYC Is Not for Sale” Mayoral Election Rally</h4>
               <p className="text-xs">Oct 27, 2025</p>
               <p className="text-sm mt-1">
@@ -108,7 +108,7 @@ export default function Home() {
           {/* 7. Early Voting Period */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="earlyvote.webp" alt="Early Voting Period" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Early Voting Period Declared for 2025 NYC Elections</h4>
               <p className="text-xs">Oct 25–Nov 2, 2025</p>
               <p className="text-sm mt-1">
@@ -123,7 +123,7 @@ export default function Home() {
           {/* 8. Polls Show Shift */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="zocucu.webp" alt="Polls Show Voter Shift" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Polls Show Shift in Voter Support for NYC Mayoral Race</h4>
               <p className="text-xs">Oct 20–21, 2025</p>
               <p className="text-sm mt-1">
@@ -138,7 +138,7 @@ export default function Home() {
           {/* 9. Comptroller Election */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="comptroller.webp" alt="Comptroller Election" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">2025 NYC Comptroller Election Scheduled</h4>
               <p className="text-xs">Nov 4, 2025</p>
               <p className="text-sm mt-1">
@@ -153,7 +153,7 @@ export default function Home() {
                     {/* 10. City Council Election */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="citynyc.jpg" alt="City Council Election" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">2025 NYC City Council Election Announced</h4>
               <p className="text-xs">Nov 4, 2025</p>
               <p className="text-sm mt-1">
@@ -165,37 +165,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 11. Meet the Candidates Report */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="meethem.webp" alt="Meet the Candidates" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">“Meet the Candidates” Report: 2025 NYC Mayoral Race</h4>
-              <p className="text-xs">Oct 28, 2025</p>
-              <p className="text-sm mt-1">
-                Media analysis of the three major mayoral candidates—Mamdani, Cuomo, and Curtis Sliwa—and where they stand on key issues.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: Helps voters understand the election dynamics and policy positions driving the race.
-              </p>
-              <a
-      href="https://www.cbsnews.com/newyork/news/nyc-mayoral-candidates-running-2025-election/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-yellow-300 underline mt-1"
-    >
-      Read the full report
-    </a>
-  </div>
-</div>
-
-          {/* 12. No Kings Protest */}
+          {/* 11. No Kings Protest */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="nokings.jpeg" alt="No Kings Protest" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-green-700 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">“No Kings” Protest in Downtown Manhattan</h4>
               <p className="text-xs">Aug 12, 2025</p>
               <p className="text-sm mt-1">
-                Hundreds of New Yorkers gathered in Foley Square for the “No Kings” protest, calling attention to concerns about concentrated political power and criticizing the emergence of political “dynasties” in city leadership. The protest featured grassroots organizers, students, and community groups advocating for more equitable representation in city government.
+                Hundreds of New Yorkers gathered in Foley Square for the “No Kings” protest, calling attention to concerns about concentrated political power and criticizing the emergence of political “dynasties” in city leadership. 
               </p>
               <p className="text-xs italic mt-1">
                 Significance: Highlights growing public pushback against political elites and emphasizes a desire for more transparent, community-driven governance in NYC.
