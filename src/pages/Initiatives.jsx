@@ -25,6 +25,30 @@ const initiatives = [
     position: [40.65805344717874, -73.99202756279001],
     description: "Lend a hand with a variety of projects from path and playground restoration, painting, and leaf raking in Prospect Park",
     link: "https://www.prospectpark.org/get-involved/volunteer/"
+  },
+  {
+    name: "CHiPS Volunteering",
+    position: [40.67847649730812, -73.98275590164495],
+    description: "Help feed hungry New Yorkers in Park Slope and Gowanus",
+    link: "https://www.chipsonline.org/"
+  },
+  {
+    name: "The Bowery Mission",
+    position: [40.72203107245861, -73.992959208325],
+    description: "Serve people experiencing homelessness and poverty",
+    link: "https://www.bowery.org/"
+  },
+  {
+    name: "Life Together Works NYC",
+    position: [40.824334778606854, -73.84432446041724],
+    description: "A nonprofit dedicated to empowering the Bronx by providing resources, opportunities, and services that promote personal growth, healthy living, and community well-being.",
+    link: "https://ltworksnyc.org/"
+  },
+  {
+    name: "NY Common Pantry",
+    position: [40.83111049249743, -73.89036655761068],
+    description: "Help with the reduction of hunger and food insecurity",
+    link: "https://nycommonpantry.org/"
   }
 ];
 
