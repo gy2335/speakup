@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col md:flex-row h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50">
 
-      {/* Speak Up Mission */}
+      {/* Speak Up's Mission */}
       <div className="flex-1 flex flex-col justify-center items-center px-10 py-10">
         <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
           Welcome to Speak Up!
@@ -20,14 +20,14 @@ export default function Home() {
         </p>
       </div>
 
-      {/* NYC Current Events */}
+      {/* Current Events */}
       <div className="flex-1 bg-white shadow-md rounded-2xl p-8 mt-20 md:mt-20 mx-20 overflow-y-auto">
         <h3 className="text-2xl font-semibold text-yellow-400 mb-6 text-center">
           New York City News & Updates
         </h3>
 
         <div className="space-y-6 text-left">
-          {/* 1. Mayoral Debate */}
+          {/* Mayoral Debate */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="mayoraldebate.png" alt="Mayoral Debate" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 2. Transit Upgrades */}
+          {/* Transit Upgrades */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="train.jpg" alt="Train" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3. Cell Phone Ban */}
+          {/* Cell Phone Ban */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="cellphones.avif" alt="Cell Phone Ban" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 4. Zohran Mamdani nomination */}
+          {/* Zohran Mamdani nomination */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="zohran.jpg" alt="Mamdani nomination" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -75,7 +75,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 5. Hochul endorsement */}
+          {/* Hochul endorsement */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="hocul.jpg" alt="Hochul endorsement" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 6. NYC Is Not for Sale Rally */}
+          {/* NYC Is Not for Sale Rally */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="nycnotforsale.jpg" alt="NYC Is Not for Sale Rally" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 7. Early Voting Period */}
+          {/* Early Voting Period */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="earlyvote.webp" alt="Early Voting Period" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 8. Polls Show Shift */}
+          {/* Polls Show Shift */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="zocucu.webp" alt="Polls Show Voter Shift" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -135,7 +135,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 9. Comptroller Election */}
+          {/* Comptroller Election */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="comptroller.webp" alt="Comptroller Election" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
           </div>
 
-                    {/* 10. City Council Election */}
+          {/* City Council Election */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="citynyc.jpg" alt="City Council Election" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 11. No Kings Protest */}
+          {/* No Kings Protest */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="nokings.jpeg" alt="No Kings Protest" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
