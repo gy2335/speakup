@@ -27,13 +27,16 @@ export default function Home() {
         </h3>
 
         <div className="space-y-6 text-left">
-          {/* Mayoral Debate */}
+          {/* Mamdani Inaugurated */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
             <img src="mayoraldebate.png" alt="Mayoral Debate" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Mayoral Election</h4>
+              <h4 className="text-xl font-bold">Zohran Mamdani Sworn In as NYC's 112th Mayor</h4>
               <p className="text-sm">
-                Candidates Zohran Mamdani, Andrew Cuomo, and Curtis Sliwa recently debated elites, housing, and safety. Early voting has now begun!
+                Mamdani was inaugurated in two ceremonies, becoming NYC's first Muslim and first South Asian mayor, and its youngest since 1892.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: A historic shift in NYC leadership following the most-watched mayoral race in decades.
               </p>
             </div>
           </div>
