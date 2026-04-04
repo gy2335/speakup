@@ -4,6 +4,7 @@ import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
 import Policies from "./pages/Policies";
 import IntiativesMap from "./pages/Initiatives";
+import Archives from "./pages/Archives";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/policies" element={<Policies />} />
             <Route path="/initiatives" element={<IntiativesMap />} />
+            <Route path="/archives" element={<Archives />} />
           </Routes>
         </main>
       </div>
