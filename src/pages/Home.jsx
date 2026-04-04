@@ -29,7 +29,7 @@ export default function Home() {
         <div className="space-y-6 text-left">
           {/* Mamdani Inaugurated */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="mayoraldebate.png" alt="Mayoral Debate" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="inauguration.webp" alt="Mamdani Inauguration" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Zohran Mamdani Sworn In as NYC's 112th Mayor</h4>
               <p className="text-sm">
@@ -41,13 +41,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Transit Upgrades */}
+          {/* Free 2-K Child Care */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="train.jpg" alt="Train" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="childcare.webp" alt="Free Child Care" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Transit Upgrades</h4>
+              <h4 className="text-xl font-bold">NYC Launches Free Child Care for Two-Year-Olds</h4>
               <p className="text-sm">
-                The MTA is rolling out accessibility improvements across 12 key subway stations as part of its 2025 modernization plan.
+                Mayor Mamdani and Governor Hochul announced 2,000 free 2-K seats launching this fall in four communities, regardless of income or immigration status.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: A cornerstone of Mamdani's push toward universal child care from six weeks to five years old.
               </p>
             </div>
           </div>
