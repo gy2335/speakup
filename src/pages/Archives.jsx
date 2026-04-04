@@ -114,8 +114,7 @@ export default function Archives() {
           Archives
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-lg">
-          A record of past New York City news, policies, and initiatives. Browse
-          through previous events to understand how the city has evolved over time.
+          A record of past New York City news. Browse through previous events to understand how the city has evolved over time.
         </p>
         <p className="text-gray-600 italic">
           "The more you know about the past, the better prepared you are for the future."
