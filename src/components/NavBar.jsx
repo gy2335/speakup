@@ -8,6 +8,7 @@ export default function Navbar() {
     { name: "Home", path: "/home" },
     { name: "Policies", path: "/policies" },
     { name: "Initiatives", path: "/initiatives" },
+    { name: "Archives", path: "/archives" }
   ];
 
   return (
