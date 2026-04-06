@@ -30,7 +30,7 @@ export default function Home() {
 
           {/* NYC Budget Deficit - Apr 1, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="budget.jpg" alt="NYC Budget Deficit" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="budget.webp" alt="NYC Budget Deficit" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">NYC Faces $5.4 Billion Budget Gap</h4>
               <p className="text-xs">Apr 1, 2026</p>
@@ -45,7 +45,7 @@ export default function Home() {
 
           {/* TikTok Ban Reversed - Mar 31, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="tiktok.jpg" alt="TikTok Ban Reversed" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="tiktok.avif" alt="TikTok Ban Reversed" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">NYC Government Returns to TikTok</h4>
               <p className="text-xs">Mar 31, 2026</p>
@@ -75,7 +75,7 @@ export default function Home() {
 
           {/* Office of Community Safety - Mar 19, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="publicsafety.jpg" alt="Office of Community Safety" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="officesafe.webp" alt="Office of Community Safety" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">NYC Launches Office of Community Safety</h4>
               <p className="text-xs">Mar 19, 2026</p>
@@ -90,7 +90,7 @@ export default function Home() {
 
           {/* Rental Rip-Off Hearings - Mar 17, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="housing.jpg" alt="Rental Rip-Off Hearings" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="housing.jpeg" alt="Rental Rip-Off Hearings" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Mamdani Hosts "Rental Rip-Off" Hearings for Tenants</h4>
               <p className="text-xs">Mar 17, 2026</p>
@@ -105,7 +105,7 @@ export default function Home() {
 
           {/* Free 2-K Child Care - Mar 3, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="childcare.jpg" alt="Free Child Care" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="childcare.webp" alt="Free Child Care" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">NYC Launches Free Child Care for Two-Year-Olds</h4>
               <p className="text-xs">Mar 3, 2026</p>
@@ -120,7 +120,7 @@ export default function Home() {
 
           {/* Mamdani Inaugurated - Jan 1, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="mamdani-inauguration.jpg" alt="Mamdani Inauguration" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="inauguration.webp" alt="Mamdani Inauguration" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">Zohran Mamdani Sworn In as NYC's 112th Mayor</h4>
               <p className="text-xs">Jan 1, 2026</p>
@@ -135,7 +135,7 @@ export default function Home() {
 
           {/* Minimum Wage - Jan 1, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="minimumwage.jpg" alt="Minimum Wage Increase" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="wage.jpg" alt="Minimum Wage Increase" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">NYC Minimum Wage Rises to $17/Hour</h4>
               <p className="text-xs">Jan 1, 2026</p>
@@ -150,7 +150,7 @@ export default function Home() {
 
           {/* FIFA World Cup - Jun-Jul 2026 (Upcoming) */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="worldcup.jpg" alt="FIFA World Cup" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="fifa.webp" alt="FIFA World Cup" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">FIFA World Cup Coming to MetLife Stadium</h4>
               <p className="text-xs">Jun–Jul 2026 (Upcoming)</p>
