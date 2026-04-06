@@ -19,8 +19,6 @@ export default function Navbar() {
         <div>
           <Link to="/home" className="flex items-center space-x-3">
             <img src="/speakuplogo.png" alt="Logo" className="h-16" />
-          </Link>
-        </div>
 
         {/* Show only on desktop */}
         <span className="hidden md:block text-2xl font-bold text-blue-500">
