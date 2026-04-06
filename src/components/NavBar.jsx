@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full bg-gradient-to-r from-[#FFE8A1] via-[#FDF5E6] to-[#B0CDEB] border-b-4 border-[#173B64] sticky top-0 left-0 z-50 transition-all">
+    <nav className="w-full bg-gradient-to-r from-[#FFE8A1] via-[#FDF5E6] to-[#B0CDEB] sticky top-0 left-0 z-50 transition-all">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Title */}
         <div>
