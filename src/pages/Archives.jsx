@@ -171,11 +171,11 @@ export default function Archives() {
          {sorted.length === 0 ? (
           <p className="text-center text-gray-400 mt-10">No events found in this date range.</p>
         ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+          <div className="columns-1 md:columns-2 gap-8 max-w-5xl mx-auto">
             {sorted.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+                className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <img
                   src={item.img}

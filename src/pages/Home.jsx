@@ -25,10 +25,10 @@ export default function Home() {
           New York City News & Updates
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+        <div className="columns-1 md:columns-2 gap-8 max-w-5xl mx-auto">
 
           {/* NYC Budget Deficit */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="budget.webp" alt="NYC Budget Deficit" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Apr 1, 2026</p>
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
 
           {/* TikTok Ban Reversed */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="tiktok.avif" alt="TikTok Ban Reversed" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Mar 31, 2026</p>
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
 
           {/* $108M Sewer Investment */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="sewer.jpg" alt="Sewer Investment" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Mar 31, 2026</p>
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
 
           {/* Office of Community Safety */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="officesafe.webp" alt="Office of Community Safety" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Mar 19, 2026</p>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
 
           {/* Rental Rip-Off Hearings */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="housing.jpeg" alt="Rental Rip-Off Hearings" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Mar 17, 2026</p>
@@ -103,7 +103,7 @@ export default function Home() {
           </div>
 
           {/* Free 2-K Child Care */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="childcare.webp" alt="Free Child Care" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Mar 3, 2026</p>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
 
           {/* Mamdani Inaugurated */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="inauguration.webp" alt="Mamdani Inauguration" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Jan 1, 2026</p>
@@ -133,7 +133,7 @@ export default function Home() {
           </div>
 
           {/* Minimum Wage */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="wage.jpg" alt="Minimum Wage Increase" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Jan 1, 2026</p>
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
 
           {/* FIFA World Cup */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="fifa.webp" alt="FIFA World Cup" className="w-full object-cover" />
             <div className="p-5">
               <p className="text-xs text-gray-400 mb-1">Jun–Jul 2026 (Upcoming)</p>
