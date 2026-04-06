@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Policies from "./pages/Policies";
 import IntiativesMap from "./pages/Initiatives";
 import Archives from "./pages/Archives";
+import ContactUs from "./pages/ContactUs";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/policies" element={<Policies />} />
             <Route path="/initiatives" element={<IntiativesMap />} />
             <Route path="/archives" element={<Archives />} />
+            <Route path="/contactus" element={<ContactUs />} />
           </Routes>
         </main>
       </div>
