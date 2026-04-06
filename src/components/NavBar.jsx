@@ -53,9 +53,9 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <span className="text-3xl">&#10005;</span> // x button
+            <span className="text-3xl">&#10005;</span> {/* x button */}
           ) : (
-            <span className="text-3xl">&#9776;</span> // hamburger
+            <span className="text-3xl">&#9776;</span> {/* hamburger */}
           )}
         </button>
       </div>
