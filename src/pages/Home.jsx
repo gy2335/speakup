@@ -13,7 +13,7 @@ export default function Home() {
           Speak Up is a platform dedicated to helping New Yorkers understand local policies and initiatives. We break down government action and provide accessible opportunities so that everyone can actively engage with their community and have their voices heard.
         </p>
         <p className="text-gray-600 italic">
-          “Speak up, even if your voice shakes.”
+          "Speak up, even if your voice shakes."
         </p>
         <p className="text-gray-600">
           - Eleanor Roosevelt
@@ -27,26 +27,89 @@ export default function Home() {
         </h3>
 
         <div className="space-y-6 text-left">
-          {/* Mamdani Inaugurated */}
+
+          {/* NYC Budget Deficit - Apr 1, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="inauguration.webp" alt="Mamdani Inauguration" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="budget.jpg" alt="NYC Budget Deficit" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Zohran Mamdani Sworn In as NYC's 112th Mayor</h4>
-              <p className="text-sm">
-                Mamdani was inaugurated in two ceremonies, becoming NYC's first Muslim and first South Asian mayor, and its youngest since 1892.
+              <h4 className="text-xl font-bold">NYC Faces $5.4 Billion Budget Gap</h4>
+              <p className="text-xs">Apr 1, 2026</p>
+              <p className="text-sm mt-1">
+                Mayor Mamdani and the City Council are clashing over how to close a $5.4 billion deficit, with disagreements over property tax hikes and service cuts.
               </p>
               <p className="text-xs italic mt-1">
-                Significance: A historic shift in NYC leadership following the most-watched mayoral race in decades.
+                Significance: The outcome will directly affect city services, schools, and public workers across all five boroughs.
               </p>
             </div>
           </div>
 
-          {/* Free 2-K Child Care */}
+          {/* TikTok Ban Reversed - Mar 31, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="childcare.webp" alt="Free Child Care" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
+            <img src="tiktok.jpg" alt="TikTok Ban Reversed" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">NYC Government Returns to TikTok</h4>
+              <p className="text-xs">Mar 31, 2026</p>
+              <p className="text-sm mt-1">
+                Mayor Mamdani reversed the city's TikTok ban, allowing agencies to post again under strict security rules to better communicate with New Yorkers.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: Reflects the new administration's focus on accessible, social-media-forward civic communication.
+              </p>
+            </div>
+          </div>
+
+          {/* $108M Sewer Investment - Mar 31, 2026 */}
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
+            <img src="sewer.jpg" alt="Sewer Investment" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">$108M Investment to Upgrade NYC Sewers</h4>
+              <p className="text-xs">Mar 31, 2026</p>
+              <p className="text-sm mt-1">
+                The city announced a $108 million plan to replace over 6,700 catch basins citywide over the next decade to reduce flooding from intense rainstorms.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: Addresses growing climate-driven flooding as part of NYC's infrastructure resilience push.
+              </p>
+            </div>
+          </div>
+
+          {/* Office of Community Safety - Mar 19, 2026 */}
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
+            <img src="publicsafety.jpg" alt="Office of Community Safety" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">NYC Launches Office of Community Safety</h4>
+              <p className="text-xs">Mar 19, 2026</p>
+              <p className="text-sm mt-1">
+                Mayor Mamdani signed an executive order creating the new Office of Community Safety, focused on civilian mental health crisis response.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: Aims to shift some public safety responsibilities from police to trained civilian responders.
+              </p>
+            </div>
+          </div>
+
+          {/* Rental Rip-Off Hearings - Mar 17, 2026 */}
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
+            <img src="housing.jpg" alt="Rental Rip-Off Hearings" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">Mamdani Hosts "Rental Rip-Off" Hearings for Tenants</h4>
+              <p className="text-xs">Mar 17, 2026</p>
+              <p className="text-sm mt-1">
+                The mayor launched a new forum where renters can bring complaints about bad landlords directly to housing officials — and the mayor himself.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: Puts tenant protection at the center of the new administration's housing agenda.
+              </p>
+            </div>
+          </div>
+
+          {/* Free 2-K Child Care - Mar 3, 2026 */}
+          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
+            <img src="childcare.jpg" alt="Free Child Care" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
               <h4 className="text-xl font-bold">NYC Launches Free Child Care for Two-Year-Olds</h4>
-              <p className="text-sm">
+              <p className="text-xs">Mar 3, 2026</p>
+              <p className="text-sm mt-1">
                 Mayor Mamdani and Governor Hochul announced 2,000 free 2-K seats launching this fall in four communities, regardless of income or immigration status.
               </p>
               <p className="text-xs italic mt-1">
@@ -55,133 +118,47 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Cell Phone Ban */}
+          {/* Mamdani Inaugurated - Jan 1, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="cellphones.avif" alt="Cell Phone Ban" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Cell Phone Ban in Schools</h4>
-              <p className="text-sm">
-                The cell phone ban has occurred for two months since the start of schools across New York City.
+            <img src="mamdani-inauguration.jpg" alt="Mamdani Inauguration" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">Zohran Mamdani Sworn In as NYC's 112th Mayor</h4>
+              <p className="text-xs">Jan 1, 2026</p>
+              <p className="text-sm mt-1">
+                Mamdani was inaugurated in two ceremonies, becoming NYC's first Muslim and first South Asian mayor, and its youngest since 1892.
+              </p>
+              <p className="text-xs italic mt-1">
+                Significance: A historic shift in NYC leadership following the most-watched mayoral race in decades.
               </p>
             </div>
           </div>
 
-          {/* Zohran Mamdani nomination */}
+          {/* Minimum Wage - Jan 1, 2026 */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="zohran.jpg" alt="Mamdani nomination" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Zohran Mamdani wins Democratic nomination for NYC mayor</h4>
-              <p className="text-xs">July 1, 2025</p>
+            <img src="minimumwage.jpg" alt="Minimum Wage Increase" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">NYC Minimum Wage Rises to $17/Hour</h4>
+              <p className="text-xs">Jan 1, 2026</p>
               <p className="text-sm mt-1">
-                A major upset as Mamdani defeats Andrew Cuomo in the Democratic primary, signaling a shift in NYC’s political landscape.
+                New York City's minimum wage increased to $17 per hour as part of a new round of state labor laws taking effect in 2026.
               </p>
               <p className="text-xs italic mt-1">
-                Significance: Marks growing strength of progressive politics in New York City.
+                Significance: Provides a direct wage boost to hundreds of thousands of low-income workers in the city.
               </p>
             </div>
           </div>
 
-          {/* Hochul endorsement */}
+          {/* FIFA World Cup - Jun-Jul 2026 (Upcoming) */}
           <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="hocul.jpg" alt="Hochul endorsement" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Kathy Hochul endorses Zohran Mamdani</h4>
-              <p className="text-xs">Sep 15, 2025</p>
+            <img src="worldcup.jpg" alt="FIFA World Cup" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
+              <h4 className="text-xl font-bold">FIFA World Cup Coming to MetLife Stadium</h4>
+              <p className="text-xs">Jun–Jul 2026 (Upcoming)</p>
               <p className="text-sm mt-1">
-                The New York Governor publicly throws support behind Mamdani, bolstering his campaign ahead of the general election.
+                MetLife Stadium will host eight World Cup matches this summer — the New York area's first Men's World Cup games since 1994.
               </p>
               <p className="text-xs italic mt-1">
-                Significance: Shows establishment support aligning with a progressive candidate.
-              </p>
-            </div>
-          </div>
-
-          {/* NYC Is Not for Sale Rally */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="nycnotforsale.jpg" alt="NYC Is Not for Sale Rally" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">“NYC Is Not for Sale” Mayoral Election Rally</h4>
-              <p className="text-xs">Oct 27, 2025</p>
-              <p className="text-sm mt-1">
-                Rally in Queens attended by about 13,000 people, featuring progressive figures and major campaign messaging ahead of the Nov 4 election.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: Highlights grassroots energy and mobilization in the upcoming mayoral race.
-              </p>
-            </div>
-          </div>
-
-          {/* Early Voting Period */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="earlyvote.webp" alt="Early Voting Period" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Early Voting Period Declared for 2025 NYC Elections</h4>
-              <p className="text-xs">Oct 25–Nov 2, 2025</p>
-              <p className="text-sm mt-1">
-                Official early-voting dates announced for the general election, giving voters longer access to ballots.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: Reflects changes in voting access and civic participation in the city.
-              </p>
-            </div>
-          </div>
-
-          {/* Polls Show Shift */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="zocucu.webp" alt="Polls Show Voter Shift" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">Polls Show Shift in Voter Support for NYC Mayoral Race</h4>
-              <p className="text-xs">Oct 20–21, 2025</p>
-              <p className="text-sm mt-1">
-                Recent polling indicates a tightening race between the top mayoral candidates, signaling a highly competitive general election.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: Demonstrates how public opinion is shifting rapidly in the lead-up to Election Day.
-              </p>
-            </div>
-          </div>
-
-          {/* Comptroller Election */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="comptroller.webp" alt="Comptroller Election" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">2025 NYC Comptroller Election Scheduled</h4>
-              <p className="text-xs">Nov 4, 2025</p>
-              <p className="text-sm mt-1">
-                Alongside the mayor’s race, the city will elect a new Comptroller, which adds to the stakes of the 2025 elections.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: Important down-ballot race that impacts city finances and oversight.
-              </p>
-            </div>
-          </div>
-
-          {/* City Council Election */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="citynyc.jpg" alt="City Council Election" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">2025 NYC City Council Election Announced</h4>
-              <p className="text-xs">Nov 4, 2025</p>
-              <p className="text-sm mt-1">
-                All 51 Council seats will be contested, with implications for the legislative balance in New York City.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: City governance will be shaped by the outcome of these elections.
-              </p>
-            </div>
-          </div>
-
-          {/* No Kings Protest */}
-          <div className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl">
-            <img src="nokings.jpeg" alt="No Kings Protest" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-end p-4 text-white">
-              <h4 className="text-xl font-bold">“No Kings” Protest in Downtown Manhattan</h4>
-              <p className="text-xs">Aug 12, 2025</p>
-              <p className="text-sm mt-1">
-                Hundreds of New Yorkers gathered in Foley Square for the “No Kings” protest, calling attention to concerns about concentrated political power and criticizing the emergence of political “dynasties” in city leadership.
-              </p>
-              <p className="text-xs italic mt-1">
-                Significance: Highlights growing public pushback against political elites and emphasizes a desire for more transparent, community-driven governance in NYC.
+                Significance: A massive global event bringing economic activity and international attention to the New York metro area.
               </p>
             </div>
           </div>
