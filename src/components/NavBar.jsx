@@ -4,11 +4,6 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    document.body.style.margin = "0";
-    document.body.style.padding = "0";
-  }, []);
-
   const pages = [
     { name: "Home", path: "/home" },
     { name: "Policies", path: "/policies" },
@@ -19,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-gradient-to-r from-[#FFE8A1] via-[#FDF5E6] to-[#B0CDEB] border-b-4 border-[#173B64] sticky top-0 left-0 z-50 transition-all">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="-mt-0.5 max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Title */}
         <div>
           <Link to="/home" className="flex items-center space-x-3 group">
