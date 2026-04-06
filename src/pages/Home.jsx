@@ -25,7 +25,7 @@ export default function Home() {
           New York City News & Updates
         </h3>
 
-        <div className="flex flex-col gap-12 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
           {/* NYC Budget Deficit */}
           <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
