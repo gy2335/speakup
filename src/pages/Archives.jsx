@@ -171,7 +171,7 @@ export default function Archives() {
          {sorted.length === 0 ? (
           <p className="text-center text-gray-400 mt-10">No events found in this date range.</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
             {sorted.map((item, index) => (
               <div
                 key={index}
