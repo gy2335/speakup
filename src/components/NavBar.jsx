@@ -13,13 +13,26 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full bg-gradient-to-r from-yellow-100 via-white to-blue-100 shadow-md fixed top-0 left-0 z-50">
+  <nav className="w-full bg-[#F6FAFF]/90 backdrop-blur-lg border-b-4 border-[#173B64] sticky top-0 left-0 z-50 transition-all">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Title */}
         <div>
-          <Link to="/home" className="flex items-center space-x-3">
-            <img src="/speakuplogo.png" alt="Logo" className="h-16" />
-
+          <Link to="/home" className="flex items-center space-x-3 group">
+            <img
+              src="/speakuplogo.png"
+              alt="Logo"
+              className="h-14 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+            />
+            {/* Custom Font for Speak Up */}
+             <span
+              className="hidden md:block text-3xl font-extrabold text-[#173B64] tracking-tight drop-shadow-sm"
+              style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+            >
+              Speak Up
+            </span>
+          </Link>
+        </div>
+        
         {/* Show only on desktop */}
         <span className="hidden md:block text-2xl font-bold text-blue-500">
           Speak Up
