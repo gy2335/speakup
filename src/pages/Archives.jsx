@@ -106,9 +106,9 @@ export default function Archives() {
   const sorted = [...filtered].sort((a, b) => a.sortDate - b.sortDate);
 
   return (
-    <div className="flex flex-col md:flex-row h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50">
+    <div className="min-h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50 overflow-y-auto">
 
-      {/* Left Panel */}
+      {/* Header */}
       <div className="flex-1 flex flex-col justify-center items-center px-10 py-10">
         <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
           Archives
@@ -158,32 +158,36 @@ export default function Archives() {
         </div>
       </div>
 
-      {/* Right Panel — Archived Cards */}
-      <div className="flex-1 bg-white shadow-md rounded-2xl p-8 mt-20 md:mt-20 mx-20 overflow-y-auto">
-        <h3 className="text-2xl font-semibold text-yellow-400 mb-6 text-center">
+      {/* Divider */}
+     <div className="w-full border-t border-blue-100 mb-10" />
+
+      {/* Archived Cards */}
+      <div className="px-10 pb-16">
+        <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
           Past Events & Updates
         </h3>
 
-        {sorted.length === 0 ? (
+
+         {sorted.length === 0 ? (
           <p className="text-center text-gray-400 mt-10">No events found in this date range.</p>
         ) : (
-          <div className="space-y-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
             {sorted.map((item, index) => (
               <div
                 key={index}
-                className="relative rounded-xl overflow-hidden h-48 shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl"
+                className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 text-white">
-                  <h4 className="text-xl font-bold">{item.title}</h4>
-                  <p className="text-xs">{item.date}</p>
-                  <p className="text-sm mt-1">{item.description}</p>
+                <div className="p-5">
+                  <p className="text-xs text-gray-400 mb-1">{item.date}</p>
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-600 mb-2">{item.description}</p>
                   {item.significance && (
-                    <p className="text-xs italic mt-1">Significance: {item.significance}</p>
+                    <p className="text-xs text-blue-400 italic">Significance: {item.significance}</p>
                   )}
                 </div>
               </div>
