@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-  <nav className="w-full bg-[#F6FAFF]/90 backdrop-blur-lg border-b-4 border-[#173B64] sticky top-0 left-0 z-50 transition-all">
+    <nav className="w-full bg-gradient-to-r from-[#FFDE70] via-[#FAF0CA] to-[#A3C4EB] border-b-4 border-[#173B64] sticky top-0 left-0 z-50 transition-all">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Title */}
         <div>
@@ -21,12 +21,12 @@ export default function Navbar() {
             <img
               src="/speakuplogo.png"
               alt="Logo"
-              className="h-14 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+              className="h-16 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 drop-shadow-md"
             />
-            {/* Custom Font for Speak Up */}
-             <span
-              className="hidden md:block text-3xl font-extrabold text-[#173B64] tracking-tight drop-shadow-sm"
-              style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+            {/* Font for Speak Up */}
+            <span
+              className="hidden md:block text-4xl font-extrabold text-[#173B64] tracking-wide"
+              style={{ fontFamily: "'DynaPuff', cursive" }}
             >
               Speak Up
             </span>
@@ -35,13 +35,12 @@ export default function Navbar() {
 
 
         {/* Desktop View - Pill Buttons*/}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4" style={{ fontFamily: "'DynaPuff', cursive" }}>
           {pages.map((page) => (
             <Link
               key={page.name}
               to={page.path}
-              className="px-5 py-2.5 rounded-full font-bold text-[#173B64] bg-[#A3C4EB]/30 border-2 border-transparent hover:bg-[#FFDE70] hover:border-[#173B64] hover:shadow-[4px_4px_0px_#173B64] hover:-translate-y-1 transition-all duration-200"
-            >
+              className={`px-5 py-2.5 rounded-full font-bold text-lg text-[#173B64] ${page.bgColor} border-2 border-[#173B64] shadow-[3px_3px_0px_#173B64] hover:shadow-[5px_5px_0px_#173B64] hover:-translate-y-1 transition-all duration-200`}
               {page.name}
             </Link>
           ))}
