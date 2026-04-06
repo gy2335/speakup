@@ -32,21 +32,15 @@ export default function Navbar() {
             </span>
           </Link>
         </div>
-        
-        {/* Show only on desktop */}
-        <span className="hidden md:block text-2xl font-bold text-blue-500">
-          Speak Up
-        </span>
-      </Link>
-    </div>
 
-        {/* Desktop View */}
-        <div className="hidden md:flex space-x-6">
+
+        {/* Desktop View - Pill Buttons*/}
+        <div className="hidden md:flex space-x-4">
           {pages.map((page) => (
             <Link
               key={page.name}
               to={page.path}
-              className="text-blue-400 hover:text-blue-600 font-medium text-xl transition"
+              className="px-5 py-2.5 rounded-full font-bold text-[#173B64] bg-[#A3C4EB]/30 border-2 border-transparent hover:bg-[#FFDE70] hover:border-[#173B64] hover:shadow-[4px_4px_0px_#173B64] hover:-translate-y-1 transition-all duration-200"
             >
               {page.name}
             </Link>
