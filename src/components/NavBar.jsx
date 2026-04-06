@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+  }, []);
+
   const pages = [
     { name: "Home", path: "/home" },
     { name: "Policies", path: "/policies" },
