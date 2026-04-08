@@ -306,23 +306,100 @@ export default function Policies() {
   const categories = [...new Set(policies.map((p) => p.category))];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-white via-blue-50 to-yellow-50">
-      <div className="pt-36 px-6 md:px-12 max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-4xl font-extrabold mb-8 text-center text-blue-400">
-          New York City Policies
-        </h2>
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Outfit:wght@400;500;600;700&display=swap');
+
+        .policy-card {
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 4px 4px 0px #173B64;
+          border: 2px solid #173B64;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          display: flex;
+          flex-direction: column;
+          padding: 1.5rem;
+          font-family: 'Outfit', sans-serif;
+        }
+        .policy-card:hover {
+          transform: translate(-2px, -2px);
+          box-shadow: 6px 6px 0px #173B64;
+        }
+        .policy-footer {
+          margin-top: auto;
+          padding-top: 0.75rem;
+          border-top: 1.5px dashed #B0CDEB;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+        .search-input, .category-select {
+          border: 2px solid #173B64;
+          border-radius: 12px;
+          padding: 0.65rem 1rem;
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.95rem;
+          background: white;
+          box-shadow: 2px 2px 0px #173B64;
+          outline: none;
+          transition: box-shadow 0.15s ease;
+        }
+        .search-input:focus, .category-select:focus {
+          box-shadow: 4px 4px 0px #173B64;
+        }
+      `}</style>
+
+      <div
+        className="min-h-screen w-full"
+        style={{
+          background: "linear-gradient(135deg, #fffbe8 0%, #f0f7ff 100%)",
+          fontFamily: "'Outfit', sans-serif",
+        }}
+      >
+        {/* Hero */}
+        <div className="flex flex-col items-center px-8 pt-16 pb-10 text-center">
+          <div className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+            📋 Know What's Happening
+          </div>
+          <h1
+            className="text-6xl md:text-7xl text-[#173B64] mb-4 leading-tight"
+            style={{ fontFamily: "'Bungee Shade', cursive" }}
+          >
+            NYC Policies
+          </h1>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+            Browse the policies shaping New York City.
+          </p>
+        </div>
+
+        {/* Section divider */}
+        <div className="max-w-5xl mx-auto px-8 mb-8">
+          <div className="flex items-center gap-4">
+            <div className="flex-1 border-t-2 border-dashed border-[#B0CDEB]" />
+            <h2
+              className="text-2xl text-[#173B64] whitespace-nowrap"
+              style={{ fontFamily: "'Bungee Shade', cursive" }}
+            >
+              Browse All
+            </h2>
+            <div className="flex-1 border-t-2 border-dashed border-[#FFE8A1]" />
+          </div>
+        </div>
 
         {/* Search + Filter */}
-        <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center px-8 max-w-4xl mx-auto">
           <input
             type="text"
             placeholder="Search policies..."
-            className="flex-1 p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-300"
+            className="search-input flex-1"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <select
-            className="p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-300"
+            className="category-select"
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
           >
@@ -335,36 +412,59 @@ export default function Policies() {
           </select>
         </div>
 
-        {/* Policies List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredPolicies.map((policy) => (
-            <div
-              key={policy.name}
-              className="relative rounded-2xl overflow-hidden shadow-lg bg-white transform transition-transform hover:scale-105 hover:shadow-2xl p-6"
-            >
-              <h3 className="text-xl font-bold mb-2 text-blue-500">{policy.name}</h3>
-              <p className="text-sm text-gray-700 mb-2">{policy.description}</p>
-              <p className="text-xs text-gray-400 mb-4">Category: {policy.category}</p>
-              {policy.link && (
-                <a
-                  href={policy.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-600 font-medium underline hover:text-yellow-500"
-                >
-                  Learn More
-                </a>
-              )}
-            </div>
-          ))}
+        {/* Policies Grid */}
+        <div className="px-8 pb-20 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredPolicies.map((policy) => (
+              <div key={policy.name} className="policy-card">
+                {/* Category pill */}
+                <span className="inline-block self-start bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">
+                  {policy.category}
+                </span>
 
-          {filteredPolicies.length === 0 && (
-            <p className="text-gray-500 text-center col-span-full">
-              No policies found.
-            </p>
-          )}
+                <h3 className="text-xl font-bold text-[#173B64] mb-2 leading-snug">
+                  {policy.name}
+                </h3>
+
+                <p className="text-sm text-gray-600 leading-relaxed mb-2">
+                  {policy.description}
+                </p>
+
+                {policy.whoImpacts && (
+                  <p className="text-xs text-gray-500 italic mb-2">
+                    <span className="font-semibold not-italic text-[#173B64]">Who it impacts: </span>
+                    {policy.whoImpacts}
+                  </p>
+                )}
+
+                <div className="policy-footer">
+                  {policy.year && (
+                    <span className="text-xs font-semibold text-[#B0CDEB] uppercase tracking-widest">
+                      {policy.year}
+                    </span>
+                  )}
+                  {policy.link && (
+                    <a
+                      href={policy.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-bold text-[#173B64] underline decoration-[#FFE8A1] decoration-2 underline-offset-2 hover:text-blue-600 transition-colors"
+                    >
+                      Learn More →
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {filteredPolicies.length === 0 && (
+              <p className="text-gray-500 text-center col-span-full py-12 text-lg">
+                No policies found.
+              </p>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
