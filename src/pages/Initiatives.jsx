@@ -130,72 +130,171 @@ export default function IntiativesMap() {
   );
 
   return (
-    <div className="w-screen min-h-screen pt-32 px-6 md:px-12 bg-gradient-to-br from-white via-blue-50 to-yellow-50">
-      <h2 className="text-4xl md:text-4xl font-extrabold mb-8 text-center text-blue-400">
-        New York City Initiatives
-      </h2>
-      <div className="flex flex-col md:flex-row gap-6 h-[calc(100vh-8rem)]">
-        {/* Map */}
-        <div className="flex-[2] min-h-[400px] md:h-full rounded-lg overflow-hidden shadow-md">
-          <MapContainer
-            center={[40.7128, -74.006]}
-            zoom={11}
-            scrollWheelZoom={false}
-            className="w-full h-full"
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Outfit:wght@400;500;600;700&display=swap');
+
+        .initiative-card {
+          background: white;
+          border-radius: 20px;
+          border: 2px solid #173B64;
+          box-shadow: 4px 4px 0px #173B64;
+          padding: 1.4rem 1.6rem;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          cursor: pointer;
+          font-family: 'Outfit', sans-serif;
+          position: relative;  
+          z-index: 0;  
+        }
+        .initiative-card:hover {
+       //   transform: translate(-2px, -2px);
+          box-shadow: 6px 6px 0px #173B64;
+          z-index: 10; 
+        }
+        .initiative-card.active {
+          border-color: #2563eb;
+          box-shadow: 4px 4px 0px #2563eb;
+          background: #f0f7ff;
+        }
+        .initiative-footer {
+          margin-top: 0.85rem;
+          padding-top: 0.85rem;
+          border-top: 1.5px dashed #B0CDEB;
+        }
+        .search-input {
+          border: 2px solid #173B64;
+          border-radius: 14px;
+          padding: 0.75rem 1.1rem;
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.95rem;
+          background: white;
+          box-shadow: 3px 3px 0px #173B64;
+          outline: none;
+          transition: box-shadow 0.15s ease;
+          width: 100%;
+        }
+        .search-input:focus {
+          box-shadow: 5px 5px 0px #173B64;
+        }
+        .map-wrapper {
+          border: 2px solid #173B64;
+          border-radius: 24px;
+          box-shadow: 4px 4px 0px #173B64;
+          overflow: hidden;
+        }
+      `}</style>
+
+      <div
+        className="w-screen min-h-screen"
+        style={{
+          background: "linear-gradient(135deg, #fffbe8 0%, #f0f7ff 100%)",
+          fontFamily: "'Outfit', sans-serif",
+        }}
+      >
+        {/* Hero */}
+        <div className="flex flex-col items-center px-10 pt-16 pb-10 text-center">
+          <div className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+            🤝 Get Involved
+          </div>
+          <h1
+            className="text-6xl md:text-7xl text-[#173B64] mb-4 leading-tight"
+            style={{ fontFamily: "'Bungee Shade', cursive" }}
           >
-            <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-              attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+            NYC Initiatives
+          </h1>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+            Find volunteer opportunities and community initiatives across New York City.
+            Click a card to zoom in on the map, or explore the pins directly.
+          </p>
+        </div>
+
+        {/* Section divider */}
+        <div className="max-w-screen-2xl mx-auto px-10 mb-8">
+          <div className="flex items-center gap-4">
+            <div className="flex-1 border-t-2 border-dashed border-[#B0CDEB]" />
+            <h2
+              className="text-2xl text-[#173B64] whitespace-nowrap"
+              style={{ fontFamily: "'Bungee Shade', cursive" }}
+            >
+              Explore the Map
+            </h2>
+            <div className="flex-1 border-t-2 border-dashed border-[#FFE8A1]" />
+          </div>
+        </div>
+
+        {/* Map + List*/}
+        <div
+          className="px-10 pb-10 mx-auto flex flex-col md:flex-row gap-8"
+          style={{ height: "calc(100vh - 22rem)", maxWidth: "98vw" }}
+        >
+          {/* Map */}
+          <div className="flex-[3] min-h-[500px] md:h-full map-wrapper">
+            <MapContainer
+              center={[40.7128, -74.006]}
+              zoom={12}
+              scrollWheelZoom={true}
+              className="w-full h-full"
+            >
+              <TileLayer
+                url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+              />
+              {markerElements}
+              {selectedMarker && <FlyToMarker position={selectedMarker.position} />}
+            </MapContainer>
+          </div>
+
+          {/* Initiative List */}
+          <div className="flex-[1] h-full overflow-y-auto flex flex-col gap-4 pr-4" style={{ minWidth: "300px" }}>
+            <input
+              type="text"
+              placeholder="Search initiatives..."
+              className="search-input"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
 
-            {markerElements}
+            <ul className="space-y-4">
+              {filteredInitiatives.map((init) => (
+                <li
+                  key={init.name}
+                  className={`initiative-card ${selectedMarker?.name === init.name ? "active" : ""}`}
+                  onClick={() => setSelectedMarker(init)}
+                >
+                  <span className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-2.5 py-0.5 rounded-full mb-2">
+                    Volunteer
+                  </span>
+                  <p className="text-base font-bold text-[#173B64] leading-snug mb-1">
+                    {init.name}
+                  </p>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {init.description}
+                  </p>
+                  {init.link && (
+                    <div className="initiative-footer">
+                      <a
+                        href={init.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-sm font-bold text-[#173B64] underline decoration-[#FFE8A1] decoration-2 underline-offset-2 hover:text-blue-600 transition-colors"
+                      >
+                        Learn More →
+                      </a>
+                    </div>
+                  )}
+                </li>
+              ))}
 
-            {selectedMarker && <FlyToMarker position={selectedMarker.position} />}
-          </MapContainer>
-        </div>
-
-        {/* Initiative List */}
-        <div className="flex-[1] h-full overflow-y-auto space-y-4">
-          <input
-            type="text"
-            placeholder="Search initiatives..."
-            className="w-full mb-4 p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-300"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-
-          <ul className="space-y-4">
-            {filteredInitiatives.map((init) => (
-              <li
-                key={init.name}
-                className="relative rounded-2xl overflow-hidden shadow-lg bg-white p-4"
-              >
-                {/* click name/description to fly */}
-                <div onClick={() => setSelectedMarker(init)}>
-                  <strong className="text-lg text-blue-500">{init.name}</strong>
-                  <p className="text-sm text-gray-700">{init.description}</p>
-                </div>
-
-                {/* link */}
-                {init.link && (
-                  <a
-                    href={init.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-yellow-600 underline hover:text-yellow-500 mt-2 block"
-                  >
-                    Learn More
-                  </a>
-                )}
-              </li>
-            ))}
-
-            {filteredInitiatives.length === 0 && (
-              <li className="text-gray-500 text-center">No initiatives found.</li>
-            )}
-          </ul>
+              {filteredInitiatives.length === 0 && (
+                <li className="text-gray-500 text-center py-8 text-base">
+                  No initiatives found.
+                </li>
+              )}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
