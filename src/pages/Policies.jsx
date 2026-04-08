@@ -362,7 +362,7 @@ export default function Policies() {
         {/* Hero */}
         <div className="flex flex-col items-center px-8 pt-16 pb-10 text-center">
           <div className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-            📋 Know What's Happening
+            Know What's Happening
           </div>
           <h1
             className="text-6xl md:text-7xl text-[#173B64] mb-4 leading-tight"
