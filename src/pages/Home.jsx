@@ -9,6 +9,7 @@ export default function Home() {
       title: "NYC Faces $5.4 Billion Budget Gap",
       body: "Mayor Mamdani and the City Council are clashing over how to close a $5.4 billion deficit, with disagreements over property tax hikes and service cuts.",
       significance: "The outcome will directly affect city services, schools, and public workers across all five boroughs.",
+      link: "https://www.nyc.gov/mayors-office/news/2026/02/mayor-mamdani-releases-balanced-fiscal-year-2027-preliminary-bud",
     },
     {
       img: "tiktok.avif",
@@ -17,6 +18,7 @@ export default function Home() {
       title: "NYC Government Returns to TikTok",
       body: "Mayor Mamdani reversed the city's TikTok ban, allowing agencies to post again under strict security rules to better communicate with New Yorkers.",
       significance: "Reflects the new administration's focus on accessible, social-media-forward civic communication.",
+      link: "https://www.nytimes.com/2026/03/31/nyregion/mamdani-tiktok-nyc.html",   
     },
     {
       img: "sewer.jpg",
@@ -25,14 +27,16 @@ export default function Home() {
       title: "$108M Investment to Upgrade NYC Sewers",
       body: "The city announced a $108 million plan to replace over 6,700 catch basins citywide over the next decade to reduce flooding from intense rainstorms.",
       significance: "Addresses growing climate-driven flooding as part of NYC's infrastructure resilience push.",
+      link: "https://brooklyneagle.com/378462/mamdani-improve-sewer-performance/",  
     },
     {
-      img: "officesafe.webp",
+      img: "dcs.webp",
       alt: "Office of Community Safety",
       date: "Mar 19, 2026",
       title: "NYC Launches Office of Community Safety",
       body: "Mayor Mamdani signed an executive order creating the new Office of Community Safety, focused on civilian mental health crisis response.",
       significance: "Aims to shift some public safety responsibilities from police to trained civilian responders.",
+      link: "https://www.nytimes.com/2026/03/18/nyregion/mamdani-department-community-safety-nyc.html", 
     },
     {
       img: "housing.jpeg",
@@ -41,6 +45,7 @@ export default function Home() {
       title: 'Mamdani Hosts "Rental Rip-Off" Hearings for Tenants',
       body: "The mayor launched a new forum where renters can bring complaints about bad landlords directly to housing officials — and the mayor himself.",
       significance: "Puts tenant protection at the center of the new administration's housing agenda.",
+      link: "https://www.nyc.gov/main/rental-ripoff",   
     },
     {
       img: "childcare.webp",
@@ -49,6 +54,7 @@ export default function Home() {
       title: "NYC Launches Free Child Care for Two-Year-Olds",
       body: "Mayor Mamdani and Governor Hochul announced 2,000 free 2-K seats launching this fall in four communities, regardless of income or immigration status.",
       significance: "A cornerstone of Mamdani's push toward universal child care from six weeks to five years old.",
+      link: "https://www.nyc.gov/mayors-office/news/2026/01/mayor-mamdani---governor-hochul-to-launch-free-child-care-for-tw",
     },
     {
       img: "inauguration.webp",
@@ -57,6 +63,7 @@ export default function Home() {
       title: "Zohran Mamdani Sworn In as NYC's 112th Mayor",
       body: "Mamdani was inaugurated in two ceremonies, becoming NYC's first Muslim and first South Asian mayor, and its youngest since 1892.",
       significance: "A historic shift in NYC leadership following the most-watched mayoral race in decades.",
+      link: "http://npr.org/2026/01/01/nx-s1-5663372/zohran-mamdani-sworn-in-as-new-york-city-mayor-capping-historic-rise",   
     },
     {
       img: "wage.jpg",
@@ -65,6 +72,7 @@ export default function Home() {
       title: "NYC Minimum Wage Rises to $17/Hour",
       body: "New York City's minimum wage increased to $17 per hour as part of a new round of state labor laws taking effect in 2026.",
       significance: "Provides a direct wage boost to hundreds of thousands of low-income workers in the city.",
+      link: "https://www.ny.gov/programs/new-york-states-minimum-wage",   
     },
     {
       img: "fifa.webp",
@@ -73,6 +81,7 @@ export default function Home() {
       title: "FIFA World Cup Coming to MetLife Stadium",
       body: "MetLife Stadium will host eight World Cup matches this summer — the New York area's first Men's World Cup games since 1994.",
       significance: "A massive global event bringing economic activity and international attention to the New York metro area.",
+      link: "https://www.metlifestadium.com/events/fifa-world-cup-2026",   
     },
   ];
 
@@ -99,11 +108,11 @@ export default function Home() {
         }
         .news-card img {
           width: 100%;
-          height: auto; /* Allows the image to dictate its own height naturally */
-          object-fit: contain; /* Ensures the whole image is visible */
+          height: auto;
+          object-fit: contain;
           display: block;
-          margin: 0 auto; /* Centers the image */
-          background-color: #f8fafc; /* Optional: adds a soft background if there's transparent space */
+          margin: 0 auto;
+          background-color: #f8fafc;
         }
         .card-body {
           padding: 1.25rem;
@@ -180,7 +189,7 @@ export default function Home() {
             {news.map((item, i) => (
               <a
                 key={i}
-                href="https://nycspeakup.org"
+                href={item.link} // <-- Changed this line to use the object's link property
                 target="_blank"
                 rel="noopener noreferrer"
                 className="news-card break-inside-avoid mb-6 block"
