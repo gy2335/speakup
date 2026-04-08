@@ -7,7 +7,7 @@ export default function Home() {
       {/* Speak Up's Mission */}
       <div className="flex flex-col justify-center items-center px-10 py-16 text-center">
         <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
-          Welcome to Speak Up!
+          Welcome to Speak Up!!
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-2xl">
           Speak Up is a platform dedicated to helping New Yorkers understand local policies and initiatives. We break down government action and provide accessible opportunities so that everyone can actively engage with their community and have their voices heard.
