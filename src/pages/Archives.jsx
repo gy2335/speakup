@@ -106,95 +106,170 @@ export default function Archives() {
   const sorted = [...filtered].sort((a, b) => a.sortDate - b.sortDate);
 
   return (
-    <div className="min-h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50 overflow-y-auto">
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Outfit:wght@400;500;600;700&display=swap');
 
-      {/* Header */}
-      <div className="flex-1 flex flex-col justify-center items-center px-10 py-10">
-        <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
-          Archives
-        </h2>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-lg">
-          A record of past New York City news. Browse through previous events to understand how the city has evolved over time.
-        </p>
-        <p className="text-gray-600 italic">
-          "The more you know about the past, the better prepared you are for the future."
-        </p>
-        <p className="text-gray-600 mb-8">- Theodore Roosevelt</p>
+        .archive-card {
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 2px solid #173B64;
+          box-shadow: 4px 4px 0px #173B64;
+          transition: box-shadow 0.2s ease;
+          font-family: 'Outfit', sans-serif;
+        }
+        .archive-card:hover {
+          box-shadow: 6px 6px 0px #173B64;
+        }
+        .significance-tag {
+          margin-top: 0.75rem;
+          padding-top: 0.75rem;
+          border-top: 1.5px dashed #B0CDEB;
+          font-size: 0.78rem;
+          color: #2563eb;
+          font-style: italic;
+          font-family: 'Outfit', sans-serif;
+        }
+        .filter-box {
+          background: white;
+          border: 2px solid #173B64;
+          border-radius: 20px;
+          box-shadow: 4px 4px 0px #173B64;
+          padding: 1.5rem 2rem;
+          font-family: 'Outfit', sans-serif;
+        }
+        .date-input {
+          border: 2px solid #173B64;
+          border-radius: 10px;
+          padding: 0.5rem 0.75rem;
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.9rem;
+          background: white;
+          box-shadow: 2px 2px 0px #173B64;
+          outline: none;
+          width: 100%;
+          transition: box-shadow 0.15s ease;
+        }
+        .date-input:focus {
+          box-shadow: 4px 4px 0px #173B64;
+        }
+      `}</style>
 
-        {/* Date Filter */}
-        <div className="bg-white rounded-2xl shadow-md p-6 w-full max-w-sm">
-          <h4 className="text-lg font-semibold text-blue-400 mb-4 text-center">Filter by Date</h4>
-          <div className="flex flex-col space-y-3">
-            <div>
-              <label className="text-sm text-gray-500 mb-1 block">From</label>
-              <input
-                type="date"
-                value={startDate}
-                onChange={(e) => setStartDate(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-gray-500 mb-1 block">To</label>
-              <input
-                type="date"
-                value={endDate}
-                onChange={(e) => setEndDate(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-            </div>
-            {(startDate || endDate) && (
-              <button
-                onClick={() => { setStartDate(""); setEndDate(""); }}
-                className="text-sm text-blue-400 hover:text-blue-600 underline text-center"
-              >
-                Clear filter
-              </button>
-            )}
+      <div
+        className="min-h-screen w-screen overflow-y-auto"
+        style={{
+          background: "linear-gradient(135deg, #fffbe8 0%, #f0f7ff 100%)",
+          fontFamily: "'Outfit', sans-serif",
+        }}
+      >
+        {/* Hero */}
+        <div className="flex flex-col items-center px-8 pt-16 pb-10 text-center">
+          <div className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+            Past Events
           </div>
-          <p className="text-xs text-gray-400 mt-3 text-center">
-            Showing {sorted.length} of {archives.length} events
+          <h1
+            className="text-6xl md:text-7xl text-[#173B64] mb-4 leading-tight"
+            style={{ fontFamily: "'Bungee Shade', cursive" }}
+          >
+            Archives
+          </h1>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-4">
+            A record of past New York City news. Browse through previous events to understand how the city has evolved over time.
           </p>
+          <div
+            className="filter-box w-full max-w-sm mt-4"
+          >
+            <h4
+              className="text-lg font-bold text-[#173B64] mb-4 text-center"
+              style={{ fontFamily: "'Bungee Shade', cursive" }}
+            >
+              Filter by Date
+            </h4>
+            <div className="flex flex-col space-y-3">
+              <div>
+                <label className="text-sm text-gray-500 mb-1 block font-semibold">From</label>
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  className="date-input"
+                />
+              </div>
+              <div>
+                <label className="text-sm text-gray-500 mb-1 block font-semibold">To</label>
+                <input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  className="date-input"
+                />
+              </div>
+              {(startDate || endDate) && (
+                <button
+                  onClick={() => { setStartDate(""); setEndDate(""); }}
+                  className="text-sm font-bold text-[#173B64] underline decoration-[#FFE8A1] decoration-2 underline-offset-2 hover:text-blue-600 transition-colors text-center"
+                >
+                  Clear filter
+                </button>
+              )}
+            </div>
+            <p className="text-xs text-gray-400 mt-3 text-center">
+              Showing {sorted.length} of {archives.length} events
+            </p>
+          </div>
+        </div>
+
+        {/* Section divider */}
+        <div className="max-w-5xl mx-auto px-8 mb-10">
+          <div className="flex items-center gap-4">
+            <div className="flex-1 border-t-2 border-dashed border-[#B0CDEB]" />
+            <h2
+              className="text-2xl text-[#173B64] whitespace-nowrap"
+              style={{ fontFamily: "'Bungee Shade', cursive" }}
+            >
+              Past Events & Updates
+            </h2>
+            <div className="flex-1 border-t-2 border-dashed border-[#FFE8A1]" />
+          </div>
+        </div>
+
+        {/* Cards */}
+        <div className="px-8 pb-20 max-w-5xl mx-auto">
+          {sorted.length === 0 ? (
+            <p className="text-center text-gray-400 mt-10 text-lg">No events found in this date range.</p>
+          ) : (
+            <div className="columns-1 md:columns-2 gap-6">
+              {sorted.map((item, index) => (
+                <div key={index} className="archive-card break-inside-avoid mb-6">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full object-cover"
+                    style={{ backgroundColor: "#f8fafc" }}
+                  />
+                  <div className="p-5">
+                    <span className="text-xs font-semibold text-[#B0CDEB] uppercase tracking-widest mb-1 block">
+                      {item.date}
+                    </span>
+                    <h4 className="text-lg font-bold text-[#173B64] mb-2 leading-snug">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                    {item.significance && (
+                      <div className="significance-tag">
+                        ★ {item.significance}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
-
-      {/* Divider */}
-     <div className="w-full border-t border-blue-100 mb-10" />
-
-      {/* Archived Cards */}
-      <div className="px-10 pb-16">
-        <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-          Past Events & Updates
-        </h3>
-
-
-         {sorted.length === 0 ? (
-          <p className="text-center text-gray-400 mt-10">No events found in this date range.</p>
-        ) : (
-          <div className="columns-1 md:columns-2 gap-8 max-w-5xl mx-auto">
-            {sorted.map((item, index) => (
-              <div
-                key={index}
-                className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full object-cover"
-                />
-                <div className="p-5">
-                  <p className="text-xs text-gray-400 mb-1">{item.date}</p>
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-600 mb-2">{item.description}</p>
-                  {item.significance && (
-                    <p className="text-xs text-blue-400 italic">Significance: {item.significance}</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
+    </>
   );
 }

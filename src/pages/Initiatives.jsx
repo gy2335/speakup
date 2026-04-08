@@ -194,7 +194,7 @@ export default function IntiativesMap() {
         {/* Hero */}
         <div className="flex flex-col items-center px-10 pt-16 pb-10 text-center">
           <div className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-            🤝 Get Involved
+            Get Involved
           </div>
           <h1
             className="text-6xl md:text-7xl text-[#173B64] mb-4 leading-tight"
