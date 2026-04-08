@@ -99,8 +99,11 @@ export default function Home() {
         }
         .news-card img {
           width: 100%;
-          height: 200px;
-          object-fit: cover;
+          height: auto; /* Allows the image to dictate its own height naturally */
+          object-fit: contain; /* Ensures the whole image is visible */
+          display: block;
+          margin: 0 auto; /* Centers the image */
+          background-color: #f8fafc; /* Optional: adds a soft background if there's transparent space */
         }
         .card-body {
           padding: 1.25rem;
