@@ -5,7 +5,7 @@ export default function Home() {
     <div className="min-h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50 overflow-y-auto">
 
       {/* Speak Up's Mission */}
-      <div className="flex flex-col justify-center items-center px-10 pb-16 text-center">
+      <div className="flex flex-col justify-center items-center px-10 py-16 text-center">
         <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
           Welcome to Speak Up!
         </h2>
