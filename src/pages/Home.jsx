@@ -156,7 +156,7 @@ export default function Home() {
             className="text-6xl md:text-7xl text-[#173B64] mb-6 leading-tight"
             style={{ fontFamily: "'Bungee Shade', cursive" }}
           >
-            Welcome to<br />Speak Up!!
+            Welcome to<br />Speak Up!
           </h1>
 
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-4">
