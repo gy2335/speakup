@@ -206,7 +206,7 @@ export default function Home() {
                     {item.body}
                   </p>
                   <div className="significance-tag">
-                    ★ {item.significance}
+                    {item.significance}
                   </div>
                 </div>
               </a>

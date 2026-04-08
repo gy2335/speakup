@@ -260,7 +260,7 @@ export default function Archives() {
                     </p>
                     {item.significance && (
                       <div className="significance-tag">
-                        ★ {item.significance}
+                         {item.significance}
                       </div>
                     )}
                   </div>
