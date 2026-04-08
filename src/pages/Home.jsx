@@ -1,169 +1,207 @@
 import React from "react";
 
 export default function Home() {
+  const news = [
+    {
+      img: "budget.webp",
+      alt: "NYC Budget Deficit",
+      date: "Apr 1, 2026",
+      title: "NYC Faces $5.4 Billion Budget Gap",
+      body: "Mayor Mamdani and the City Council are clashing over how to close a $5.4 billion deficit, with disagreements over property tax hikes and service cuts.",
+      significance: "The outcome will directly affect city services, schools, and public workers across all five boroughs.",
+    },
+    {
+      img: "tiktok.avif",
+      alt: "TikTok Ban Reversed",
+      date: "Mar 31, 2026",
+      title: "NYC Government Returns to TikTok",
+      body: "Mayor Mamdani reversed the city's TikTok ban, allowing agencies to post again under strict security rules to better communicate with New Yorkers.",
+      significance: "Reflects the new administration's focus on accessible, social-media-forward civic communication.",
+    },
+    {
+      img: "sewer.jpg",
+      alt: "Sewer Investment",
+      date: "Mar 31, 2026",
+      title: "$108M Investment to Upgrade NYC Sewers",
+      body: "The city announced a $108 million plan to replace over 6,700 catch basins citywide over the next decade to reduce flooding from intense rainstorms.",
+      significance: "Addresses growing climate-driven flooding as part of NYC's infrastructure resilience push.",
+    },
+    {
+      img: "officesafe.webp",
+      alt: "Office of Community Safety",
+      date: "Mar 19, 2026",
+      title: "NYC Launches Office of Community Safety",
+      body: "Mayor Mamdani signed an executive order creating the new Office of Community Safety, focused on civilian mental health crisis response.",
+      significance: "Aims to shift some public safety responsibilities from police to trained civilian responders.",
+    },
+    {
+      img: "housing.jpeg",
+      alt: "Rental Rip-Off Hearings",
+      date: "Mar 17, 2026",
+      title: 'Mamdani Hosts "Rental Rip-Off" Hearings for Tenants',
+      body: "The mayor launched a new forum where renters can bring complaints about bad landlords directly to housing officials — and the mayor himself.",
+      significance: "Puts tenant protection at the center of the new administration's housing agenda.",
+    },
+    {
+      img: "childcare.webp",
+      alt: "Free Child Care",
+      date: "Mar 3, 2026",
+      title: "NYC Launches Free Child Care for Two-Year-Olds",
+      body: "Mayor Mamdani and Governor Hochul announced 2,000 free 2-K seats launching this fall in four communities, regardless of income or immigration status.",
+      significance: "A cornerstone of Mamdani's push toward universal child care from six weeks to five years old.",
+    },
+    {
+      img: "inauguration.webp",
+      alt: "Mamdani Inauguration",
+      date: "Jan 1, 2026",
+      title: "Zohran Mamdani Sworn In as NYC's 112th Mayor",
+      body: "Mamdani was inaugurated in two ceremonies, becoming NYC's first Muslim and first South Asian mayor, and its youngest since 1892.",
+      significance: "A historic shift in NYC leadership following the most-watched mayoral race in decades.",
+    },
+    {
+      img: "wage.jpg",
+      alt: "Minimum Wage Increase",
+      date: "Jan 1, 2026",
+      title: "NYC Minimum Wage Rises to $17/Hour",
+      body: "New York City's minimum wage increased to $17 per hour as part of a new round of state labor laws taking effect in 2026.",
+      significance: "Provides a direct wage boost to hundreds of thousands of low-income workers in the city.",
+    },
+    {
+      img: "fifa.webp",
+      alt: "FIFA World Cup",
+      date: "Jun–Jul 2026 (Upcoming)",
+      title: "FIFA World Cup Coming to MetLife Stadium",
+      body: "MetLife Stadium will host eight World Cup matches this summer — the New York area's first Men's World Cup games since 1994.",
+      significance: "A massive global event bringing economic activity and international attention to the New York metro area.",
+    },
+  ];
+
   return (
-    <div className="min-h-screen w-screen bg-gradient-to-br from-white via-blue-50 to-yellow-50 overflow-y-auto">
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Outfit:wght@400;500;600;700&display=swap');
 
-      {/* Speak Up's Mission */}
-      <div className="flex flex-col justify-center items-center px-10 py-16 text-center">
-        <h2 className="text-5xl font-extrabold text-blue-400 mb-6">
-          Welcome to Speak Up!!
-        </h2>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-2xl">
-          Speak Up is a platform dedicated to helping New Yorkers understand local policies and initiatives. We break down government action and provide accessible opportunities so that everyone can actively engage with their community and have their voices heard.
-        </p>
-        <p className="text-gray-600 italic">"Speak up, even if your voice shakes."</p>
-        <p className="text-gray-600">- Eleanor Roosevelt</p>
-      </div>
+        .news-card {
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 4px 4px 0px #173B64;
+          border: 2px solid #173B64;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: inherit;
+        }
+        .news-card:hover {
+          transform: translate(-2px, -2px);
+          box-shadow: 6px 6px 0px #173B64;
+        }
+        .news-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+        .card-body {
+          padding: 1.25rem;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .significance-tag {
+          margin-top: auto;
+          padding-top: 0.75rem;
+          border-top: 1.5px dashed #B0CDEB;
+          font-size: 0.78rem;
+          color: #2563eb;
+          font-style: italic;
+          font-family: 'Outfit', sans-serif;
+        }
+        .hero-quote {
+          background: white;
+          border: 2px solid #173B64;
+          border-radius: 20px;
+          box-shadow: 4px 4px 0px #173B64;
+          padding: 1.5rem 2rem;
+          max-width: 520px;
+          margin: 2rem auto 0;
+          text-align: center;
+          font-family: 'Outfit', sans-serif;
+        }
+      `}</style>
 
-      {/* Divider */}
-      <div className="w-full border-t border-blue-100 mb-10" />
-
-      {/* News Section */}
-      <div className="px-10 pb-16">
-        <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-          New York City News & Updates
-        </h3>
-
-        <div className="columns-1 md:columns-2 gap-8 max-w-5xl mx-auto">
-
-          {/* NYC Budget Deficit */}
-          <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="budget.webp" alt="NYC Budget Deficit" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Apr 1, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">NYC Faces $5.4 Billion Budget Gap</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                Mayor Mamdani and the City Council are clashing over how to close a $5.4 billion deficit, with disagreements over property tax hikes and service cuts.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: The outcome will directly affect city services, schools, and public workers across all five boroughs.
-              </p>
-            </div>
+      <div
+        className="min-h-screen w-screen overflow-y-auto"
+        style={{ background: "linear-gradient(135deg, #fffbe8 0%, #f0f7ff 100%)", fontFamily: "'Outfit', sans-serif" }}
+      >
+        {/* Hero */}
+        <div className="flex flex-col items-center px-8 pt-16 pb-12 text-center">
+          <div className="inline-block bg-[#173B64] text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+            🗽 Your City. Your Voice.
           </div>
 
-          {/* TikTok Ban Reversed */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="tiktok.avif" alt="TikTok Ban Reversed" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Mar 31, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">NYC Government Returns to TikTok</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                Mayor Mamdani reversed the city's TikTok ban, allowing agencies to post again under strict security rules to better communicate with New Yorkers.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: Reflects the new administration's focus on accessible, social-media-forward civic communication.
-              </p>
-            </div>
-          </div>
+          <h1
+            className="text-6xl md:text-7xl text-[#173B64] mb-6 leading-tight"
+            style={{ fontFamily: "'Bungee Shade', cursive" }}
+          >
+            Welcome to<br />Speak Up!!
+          </h1>
 
-          {/* $108M Sewer Investment */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="sewer.jpg" alt="Sewer Investment" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Mar 31, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">$108M Investment to Upgrade NYC Sewers</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                The city announced a $108 million plan to replace over 6,700 catch basins citywide over the next decade to reduce flooding from intense rainstorms.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: Addresses growing climate-driven flooding as part of NYC's infrastructure resilience push.
-              </p>
-            </div>
-          </div>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-4">
+            Speak Up is a platform dedicated to helping New Yorkers understand local policies and initiatives. We break down government action and provide accessible opportunities so that everyone can actively engage with their community and have their voices heard.
+          </p>
 
-          {/* Office of Community Safety */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="officesafe.webp" alt="Office of Community Safety" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Mar 19, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">NYC Launches Office of Community Safety</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                Mayor Mamdani signed an executive order creating the new Office of Community Safety, focused on civilian mental health crisis response.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: Aims to shift some public safety responsibilities from police to trained civilian responders.
-              </p>
-            </div>
+          <div className="hero-quote">
+            <p className="text-gray-700 text-base italic mb-2">"Speak up, even if your voice shakes."</p>
+            <p className="text-[#173B64] font-semibold text-sm">— Eleanor Roosevelt</p>
           </div>
+        </div>
 
-          {/* Rental Rip-Off Hearings */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="housing.jpeg" alt="Rental Rip-Off Hearings" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Mar 17, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">Mamdani Hosts "Rental Rip-Off" Hearings for Tenants</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                The mayor launched a new forum where renters can bring complaints about bad landlords directly to housing officials — and the mayor himself.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: Puts tenant protection at the center of the new administration's housing agenda.
-              </p>
-            </div>
+        {/* Section divider */}
+        <div className="max-w-5xl mx-auto px-8 mb-10">
+          <div className="flex items-center gap-4">
+            <div className="flex-1 border-t-2 border-dashed border-[#B0CDEB]" />
+            <h2
+              className="text-3xl text-[#173B64] whitespace-nowrap"
+              style={{ fontFamily: "'Bungee Shade', cursive" }}
+            >
+              NYC News
+            </h2>
+            <div className="flex-1 border-t-2 border-dashed border-[#FFE8A1]" />
           </div>
+        </div>
 
-          {/* Free 2-K Child Care */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="childcare.webp" alt="Free Child Care" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Mar 3, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">NYC Launches Free Child Care for Two-Year-Olds</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                Mayor Mamdani and Governor Hochul announced 2,000 free 2-K seats launching this fall in four communities, regardless of income or immigration status.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: A cornerstone of Mamdani's push toward universal child care from six weeks to five years old.
-              </p>
-            </div>
+        {/* News Grid */}
+        <div className="px-8 pb-20 max-w-6xl mx-auto">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+            {news.map((item, i) => (
+              <a
+                key={i}
+                href="https://nycspeakup.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="news-card break-inside-avoid mb-6 block"
+              >
+                <img src={item.img} alt={item.alt} />
+                <div className="card-body">
+                  <span className="text-xs font-semibold text-[#B0CDEB] uppercase tracking-widest mb-1 block">
+                    {item.date}
+                  </span>
+                  <h4 className="text-lg font-bold text-[#173B64] mb-2 leading-snug">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-2">
+                    {item.body}
+                  </p>
+                  <div className="significance-tag">
+                    ★ {item.significance}
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
-
-          {/* Mamdani Inaugurated */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="inauguration.webp" alt="Mamdani Inauguration" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Jan 1, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">Zohran Mamdani Sworn In as NYC's 112th Mayor</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                Mamdani was inaugurated in two ceremonies, becoming NYC's first Muslim and first South Asian mayor, and its youngest since 1892.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: A historic shift in NYC leadership following the most-watched mayoral race in decades.
-              </p>
-            </div>
-          </div>
-
-          {/* Minimum Wage */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="wage.jpg" alt="Minimum Wage Increase" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Jan 1, 2026</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">NYC Minimum Wage Rises to $17/Hour</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                New York City's minimum wage increased to $17 per hour as part of a new round of state labor laws taking effect in 2026.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: Provides a direct wage boost to hundreds of thousands of low-income workers in the city.
-              </p>
-            </div>
-          </div>
-
-          {/* FIFA World Cup */}
-        <div className="break-inside-avoid mb-8 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="fifa.webp" alt="FIFA World Cup" className="w-full object-cover" />
-            <div className="p-5">
-              <p className="text-xs text-gray-400 mb-1">Jun–Jul 2026 (Upcoming)</p>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">FIFA World Cup Coming to MetLife Stadium</h4>
-              <p className="text-sm text-gray-600 mb-2">
-                MetLife Stadium will host eight World Cup matches this summer — the New York area's first Men's World Cup games since 1994.
-              </p>
-              <p className="text-xs text-blue-400 italic">
-                Significance: A massive global event bringing economic activity and international attention to the New York metro area.
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
+    </>
   );
 }
